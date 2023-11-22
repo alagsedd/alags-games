@@ -1,0 +1,33 @@
+.parent {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow-y: scroll;
+    height: 20rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #141418;
+    display: none;
+}
+.headerOne {
+    display: flex;
+    justify-content: center;
+}
+.headerOne span {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #51505b;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.buttonBox {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width: 900px) {
+    .parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

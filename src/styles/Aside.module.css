@@ -1,0 +1,16 @@
+.aside {
+    padding: 0.1rem;
+}
+
+.genres {
+    margin-bottom: 2rem;
+}
+@media screen and (min-width: 900px) {
+    .aside {
+        padding: 0.1rem;
+    }
+    
+    .genres {
+        margin-bottom: 2rem;
+    }
+}
