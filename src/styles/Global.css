@@ -8,21 +8,5 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(26,29,33,255);
-    padding-right: 1rem;
-}
-.header {
-    display: none;
-}
-@media screen and (min-width: 900px) {
-    .header {
-        color: #fff;
-        font-size: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    background-color: rgba(26,29,33,255) !important;
 }

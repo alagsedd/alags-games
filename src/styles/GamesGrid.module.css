@@ -2,10 +2,13 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border: 1px solid #141418;;
+    border: 1px solid #141418;
 }
 .buttonBox {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+}
+.link {
+    text-decoration: none;
 }

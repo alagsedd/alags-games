@@ -18,16 +18,22 @@ interface Response {
 interface QueryProps {
     page:number
     page_size: number
+    genre: string | undefined
+    platformId:string | undefined
+    search:string | undefined
 }
 const useGames = (query: QueryProps) => {
     return useQuery<Response,Error>({
-        queryKey: ["games", query],
+        queryKey: query.genre?  ["games", query] : ["games"],
         queryFn: () => 
             axios.get<Response>("https://api.rawg.io/api/games", {
                 params: {
                     key: "8f63d7995a164dda81263551d4913252",
                     page_size: query.page_size,
-                    page:query.page 
+                    page:query.page ,
+                    genres: query.genre ?  query.genre  : undefined,
+                    platforms: query.platformId || undefined,
+                    search:query.search || undefined
                 }
             })
                 .then(res =>res.data)

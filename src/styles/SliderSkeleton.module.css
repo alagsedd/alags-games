@@ -1,0 +1,40 @@
+
+.swiper {
+    border: 1px solid #fff;
+    width: 17rem;
+    height: 17rem;
+    margin-left: 1rem;
+}
+@media screen and (min-width: 400px) {
+    .swiper {
+        width: 23rem;
+    }
+}
+@media screen and (min-width: 450px) {
+    .swiper {
+        width: 27rem;
+    }
+}
+@media screen and (min-width: 550px) {
+    .swiper {
+        width: 32rem;
+    }
+}
+@media screen and (min-width: 650px) {
+    .swiper {
+        width: 38rem;
+    }
+}
+@media screen and (min-width: 700px) {
+    .swiper {
+        width: 43rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .swiper {
+        border: 1px solid #fff;
+        width: 40rem;
+    }
+   
+}

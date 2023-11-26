@@ -3,10 +3,15 @@
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    margin: 0.7rem;
+    margin: 0.5rem 0.5rem;
     height: 15rem;
-    width: 15rem;
-    border: 1px solid #fff;
+    width: 8.7rem;
+    background-color: #141418;
+    transition: transform 0.5s 0.3s;
+}
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 .image {
     border-top-right-radius: 10px;
@@ -22,27 +27,47 @@
     font-size: 1rem;
     color: #fff;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 260px) {
     .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 10px;
-        margin: 0.7rem;
-        height: 15rem;
-        width: 18rem;
-        border: 1px solid #fff;
+        width: 14rem;
     }
-    .image {
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        width: 100%;
-        height: 10rem;
-        object-fit: cover;
+}
+@media screen and (min-width: 270px) {
+    .card {
+        width: 15rem;
     }
-    .name {
-        margin-top: 0.5rem;
-        font-weight: 500;
-        font-size: 1.1rem;
+}
+@media screen and (min-width: 350px) {
+    .card {
+        width: 9rem;
+    }
+}
+@media screen and (min-width: 370px) {
+    .card {
+        width: 9.6rem;
+    }
+}
+@media screen and (min-width: 400px) {
+    .card {
+        width: 11rem;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}
+@media screen and (min-width: 450px) {
+    .card {
+        width: 13rem;
+    }
+}
+@media screen and (min-width: 500px) {
+    .card {
+        width: 13rem;
+    }
+}
+@media screen and (min-width: 520px) {
+    .card {
+        width: 14.5rem;
+        flex-grow: 1;
+        flex-shrink: 1;
     }
 }

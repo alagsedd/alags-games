@@ -1,31 +1,24 @@
 import useSliders from "../services/useSlider";
 import styles from "../styles/Slider.module.css";
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from "swiper/modules";
+import { Autoplay, Navigation, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import LinearBuffer from "./GamesGridLoader";
+import SliderSkeleton from "../cards/SliderSkeleton";
 
 const Slider = () => {
   const { data, isLoading } = useSliders();
 
-  if (isLoading) return <LinearBuffer />;
-
+  if (isLoading) return <SliderSkeleton />;
   return (
     <>
       <div className={styles.sliderBox}>
         <Swiper
           className={styles.swiper}
-          modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Autoplay, Scrollbar, A11y]}
           spaceBetween={0}
           slidesPerView={1}
           navigation

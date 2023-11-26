@@ -1,3 +1,21 @@
+.select {
+    display: none;
+}
+.headerOne {
+    display: flex;
+    justify-content: center;
+}
+.headerOne span {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #51505b;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.buttonBox {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+}
 .headerOne {
     display: flex;
     justify-content: center;
@@ -9,5 +27,27 @@
     font-size: 1.5rem;
 }
 .parent {
-    display: none;
+    margin-top: 3rem;
+}
+@media screen and (min-width: 900px) {
+    .select {
+        border: 0;
+        width: 12rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #141418;
+    }
+    .select option {
+        padding: 0.6rem;
+    }
+    .parent {
+        padding: 0.3rem;
+        border: 1px solid #141418;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

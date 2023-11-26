@@ -5,10 +5,8 @@
         margin: 0.5rem;
     }
     .card:hover {
-        border: 1px solid #fff;
-        padding: 0.2rem 0.5rem;
+        cursor: pointer;
     }
-    .name {}
     .image {
         border-radius: 50%;
         width: 3rem;

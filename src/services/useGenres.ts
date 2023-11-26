@@ -21,7 +21,7 @@ const useGenres = (query:QueryProps) => {
     return useQuery<Response, Error>({
         queryKey: ["sliders",query],
         queryFn: () => 
-            axios.get<Response>("https://api.rawg.io/api/platforms", {
+            axios.get<Response>("https://api.rawg.io/api/genres", {
                 params: {
                     key: "8f63d7995a164dda81263551d4913252",
                     page_size: query.page_size,

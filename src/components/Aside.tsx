@@ -5,9 +5,8 @@ import Platforms from "./Platforms";
 const Aside = () => {
   return (
     <aside className={styles.aside}>
-      <Genres />
-
       <Platforms />
+      <Genres />
     </aside>
   );
 };
