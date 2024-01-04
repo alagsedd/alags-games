@@ -7,17 +7,12 @@ import styles from "../styles/Platforms.module.css";
 const Platforms = () => {
   const { data } = usePlatforms();
 
-  const { dispatch, platformId } = useContext(PlatformContext);
+  const { dispatch } = useContext(PlatformContext);
 
   return (
     <>
       <div className={styles.parent}>
-        {/* <h1 className={styles.headerOne}>
-          <span>Platforms</span>
-        </h1> */}
-
         <select
-          value={platformId}
           className={styles.select}
           onChange={(event) => {
             console.log(

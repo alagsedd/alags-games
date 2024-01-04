@@ -4,6 +4,7 @@
     margin-left: 1rem;
 }
 .image {
+    filter: contrast(120%);
     height: 13rem;
     width: 100%;
     object-fit: cover;

@@ -2,26 +2,25 @@ import { useContext, useState } from "react";
 import useGames from "../services/useGames";
 import styles from "../styles/GamesGrid.module.css";
 import GameCard from "../cards/GameCard";
-import { Button } from "@mui/material";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { RiLoader2Line } from "react-icons/ri";
 import SkeletonCard from "../cards/SkeletonCard";
 import GenreContext from "../contexts/OnSelectGenreContext";
 import { Link } from "react-router-dom";
-import PlatformContext from "../contexts/onSelectPlatformContext";
 import SearchContext from "../contexts/OnSearchContext";
+import { Button } from "@chakra-ui/react";
+import getCroppedImageUrl from "../services/image-url";
 
 const GamesGrid = () => {
   const [page, setPage] = useState(1);
   const page_size = 20;
 
   const { genre } = useContext(GenreContext);
-  const { platformId } = useContext(PlatformContext);
   const { search } = useContext(SearchContext);
 
   const { data, isLoading, error } = useGames({
     page,
     page_size,
-    platformId,
     genre,
     search,
   });
@@ -41,7 +40,7 @@ const GamesGrid = () => {
             to={`/game-details/${item.slug}`}
           >
             <GameCard
-              image={item.background_image}
+              image={getCroppedImageUrl(item.background_image)}
               name={item.name}
               key={item.id}
             />
@@ -50,11 +49,10 @@ const GamesGrid = () => {
       </div>
       <div className={styles.buttonBox}>
         <Button
-          size="small"
           onClick={() => setPage(page + 1)}
-          color="primary"
-          startIcon={<RiLoader2Line />}
-          variant="contained"
+          colorScheme="blue"
+          leftIcon={<AiOutlineLoading3Quarters />}
+          variant="solid"
         >
           Load more
         </Button>

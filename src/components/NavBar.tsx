@@ -3,6 +3,7 @@ import styles from "../styles/NavBar.module.css";
 import SearchContext from "../contexts/OnSearchContext";
 import { CiHome } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { Input } from "@chakra-ui/react";
 
 const NavBar = () => {
   const searchRef = useRef<HTMLInputElement>(null);
@@ -26,11 +27,11 @@ const NavBar = () => {
 
         <form onSubmit={handleSearchSubmit}>
           {" "}
-          <input
+          <Input
             ref={searchRef}
             placeholder="Search 89,000 games"
             type="text"
-            className={styles.input}
+            // className={styles.input}
           />
         </form>
       </div>

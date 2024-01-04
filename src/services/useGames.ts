@@ -19,7 +19,6 @@ interface QueryProps {
     page:number
     page_size: number
     genre: string | undefined
-    platformId:string | undefined
     search:string | undefined
 }
 const useGames = (query: QueryProps) => {
@@ -32,7 +31,6 @@ const useGames = (query: QueryProps) => {
                     page_size: query.page_size,
                     page:query.page ,
                     genres: query.genre ?  query.genre  : undefined,
-                    platforms: query.platformId || undefined,
                     search:query.search || undefined
                 }
             })

@@ -7,7 +7,7 @@ const Screenshots = () => {
   const { slug } = useParams();
   const { data } = useScreenshots(slug!);
 
-  const [currentPic, setCurrentPic] = useState(data?.results[1].image);
+  const [currentPic, setCurrentPic] = useState(data?.results[2].image);
 
   return (
     <>

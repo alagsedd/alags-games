@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import SliderSkeleton from "../cards/SliderSkeleton";
+import getCroppedImageUrl from "../services/image-url";
 
 const Slider = () => {
   const { data, isLoading } = useSliders();
@@ -32,7 +33,7 @@ const Slider = () => {
               <img
                 key={item.id}
                 className={styles.image}
-                src={item.image_background}
+                src={getCroppedImageUrl(item.image_background)}
                 alt="Your browser doesn't support this image"
               />{" "}
             </SwiperSlide>

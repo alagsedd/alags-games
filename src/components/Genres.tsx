@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import GenreCard from "../cards/GenreCard";
 import { RiLoader2Line } from "react-icons/ri";
 import useGenres from "../services/useGenres";
@@ -6,6 +5,8 @@ import styles from "../styles/Genres.module.css";
 import { useContext, useState } from "react";
 import GenreContext from "../contexts/OnSelectGenreContext";
 import GenreSkeletonCard from "../cards/GenreSkeletonCard";
+import { Button } from "@chakra-ui/react";
+import getCroppedImageUrl from "../services/image-url";
 
 const Genres = () => {
   const page_size = 30;
@@ -30,7 +31,7 @@ const Genres = () => {
               dispatch({ type: "handleGenreSelection", genre: item.slug });
               console.log(item.slug, "Clicked");
             }}
-            image={item.image_background}
+            image={getCroppedImageUrl(item.image_background)}
             name={item.name}
             key={item.id}
           />
@@ -41,7 +42,7 @@ const Genres = () => {
             size="small"
             onClick={() => setPage(page + 1)}
             color="inherit"
-            startIcon={<RiLoader2Line />}
+            leftIcon={<RiLoader2Line />}
             variant="outlined"
           >
             Load more

@@ -4,8 +4,8 @@ import useDetails from "../services/useDetails";
 import { useEffect, useState } from "react";
 import ExpandableText from "../components/ExpandableText";
 import Screenshots from "../components/Screenshots";
-import { Button } from "@mui/material";
 import { FaCloudDownloadAlt } from "react-icons/fa";
+import { Button } from "@chakra-ui/react";
 
 const GameDetailsPage = () => {
   const { slug } = useParams();
@@ -104,7 +104,7 @@ const GameDetailsPage = () => {
             to={"https://edmund-alags-portfolio.vercel.app/"}
             target="_blank"
           >
-            <Button variant="outlined" startIcon={<FaCloudDownloadAlt />}>
+            <Button variant="outlined" leftIcon={<FaCloudDownloadAlt />}>
               Download now
             </Button>
           </Link>
